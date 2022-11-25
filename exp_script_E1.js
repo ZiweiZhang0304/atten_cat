@@ -357,13 +357,13 @@ var instruction = {
     ],
     show_clickable_nav: true,
 }
-timeline.push(instruction);
+//timeline.push(instruction);
 
 
 /* define fixation */
 var fixation = {
   type: 'html-keyboard-response',
-  stimulus: '<div style="margin-top: 60px; font-size:60px;">+</div>',
+  stimulus: '<div style="margin-top: 30px; font-size:50px;">+</div>',
   choices: jsPsych.NO_KEYS,
   trial_duration() {
     return Math.floor(Math.random() * 200) + 800  //Math.floor(Math.random() * 200) + 800
