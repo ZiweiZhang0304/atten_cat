@@ -166,7 +166,8 @@ var learning_stimuli_list = stim_face_C1_F.concat(stim_face_C2_F, stim_house_C1_
 for (j = 0; j < learning_stimuli_list.length; j++) {
     var learning_stimuli = new Object();
 
-    learning_stimuli.stimulus = repo_site + learning_stimuli_list[j];
+    learning_stimuli.stimulus = learning_stimuli_list[j]; //repo_site +
+    console.log(learning_stimuli_list[j]);
 
     learning_stimuli.data = new Object();
 
@@ -217,7 +218,7 @@ var test_stimuli_list = stim_face_C1_T.concat(stim_face_C2_T, stim_house_C1_T, s
 for (j = 0; j < test_stimuli_list.length; j++) {
     var test_stimuli = new Object();
 
-    test_stimuli.stimulus = repo_site + test_stimuli_list[j];
+    test_stimuli.stimulus = test_stimuli_list[j];
 
     test_stimuli.data = new Object();
 
@@ -270,6 +271,17 @@ var enter_full = {
 };
 timeline.push(enter_full);
 
+/* -----Give consent-----*/
+var check_consent = function(elem) {
+  if (document.getElementById('consent_checkbox').checked) {
+    return true;
+  }
+  else {
+    alert("If you wish to participate, you must check the box next to the statement 'I agree to participate in this study.'");
+    return false;
+  }
+  return false;
+};
 
 var consent = {
   type: 'external-html',
