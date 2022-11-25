@@ -366,7 +366,7 @@ var fixation = {
   stimulus: '<div style="margin-top: 30px; font-size:50px;">+</div>',
   choices: jsPsych.NO_KEYS,
   trial_duration() {
-    return Math.floor(Math.random() * 200) + 800  //Math.floor(Math.random() * 200) + 800
+    return Math.floor(Math.random() * 200) + 1600  //Math.floor(Math.random() * 200) + 800
   },
 }
 /* define learning trials */
@@ -375,7 +375,7 @@ var learning = {
   stimulus: jsPsych.timelineVariable('stimulus'),
   choices: ['j', 'k'],
   data: jsPsych.timelineVariable('data'),
-  trial_duration: 1600,
+  trial_duration: 2400,
   on_finish: function (data) {
       data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
   }
@@ -393,7 +393,7 @@ var feedback = {
     }
   },
   choices: jsPsych.NO_KEYS,
-  trial_duration: 800
+  trial_duration: 1600
 };
 
 
