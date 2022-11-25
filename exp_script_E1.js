@@ -371,7 +371,7 @@ var fixation = {
 }
 /* define learning trials */
 var learning = {
-  type: jsPsychImageKeyboardResponse,
+  type: "image-keyboard-response",
   stimulus: jsPsych.timelineVariable('stimulus'),
   choices: ['j', 'k'],
   data: jsPsych.timelineVariable('data'),
@@ -383,7 +383,7 @@ var learning = {
 
 /* define feedback trials */
 var feedback = {
-  type: jsPsychImageKeyboardResponse,
+  type: "image-keyboard-response",
   stimulus: function(){
     var last_trial_correct = jsPsych.data.get().filter({TaskType: 'learning'}).last(1).values()[0].correct;
     if(last_trial_correct){
@@ -409,7 +409,7 @@ timeline.push(learning_procedure);
 /* -----Phase 2: test category learning-----*/
 /* define testing trials */
 var testing = {
-  type: jsPsychImageKeyboardResponse,
+  type: "image-keyboard-response",
   stimulus: jsPsych.timelineVariable('stimulus'),
   choices: ['j', 'k'],
   data: jsPsych.timelineVariable('data'),
