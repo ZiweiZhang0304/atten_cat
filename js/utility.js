@@ -1,4 +1,4 @@
-export function shuffle(array) { //export shuffle = function(arr, n)
+function shuffle(array) { //export shuffle = function(arr, n)
   var currentIndex = array.length,  randomIndex;  // While there remain elements to shuffle...
 
   while (0 !== currentIndex) {
@@ -15,7 +15,7 @@ export function shuffle(array) { //export shuffle = function(arr, n)
     return array;
   };
 
- export function getRandom(arr, n) { //export getRandom = function(arr, n)
+function getRandom(arr, n) { //export getRandom = function(arr, n)
     var result = new Array(n),
         len = arr.length,
         taken = new Array(len);
