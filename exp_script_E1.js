@@ -10,7 +10,7 @@ var data_dir = task_name;
 //my preference is to include the task and sbj_id in the file name
 var file_name = task_name + '_' + sbj_id;
 
-var repo_site = "https://ziweizhang0304.github.io/atten_cat/blob/main/";
+var repo_site = "https://ziweizhang0304.github.io/atten_cat/";
 
 var timeline = [];
 
