@@ -359,6 +359,21 @@ var instruction = {
 }
 //timeline.push(instruction);
 
+var instruction2 = {
+    type: 'instructions',
+    pages: [
+        /* -----instr_9----- */
+        '<p style="color:black;font-size: 26px">\n' +
+        '        Please DO NOT quit or refresh the webpage. <br>\n' +
+        '        <br>\n' +
+        '        Unfortunately, we are unable to approve your submission if you exit out of the page or refresh it.<br>\n' +
+        '        <br>\n' +
+        '        Now, click on "Next" to start the main experiment. <br> \n' +
+        '</p> <br>'
+    ],
+    show_clickable_nav: true,
+}
+//timeline.push(instruction2);
 
 /* define fixation */
 var fixation = {
