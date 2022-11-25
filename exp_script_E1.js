@@ -289,7 +289,7 @@ var consent = {
   cont_fn: check_consent,
   cont_btn: 'start',
 };
-timeline.push(consent);
+//timeline.push(consent);
 
 /* -----Instructions----- */
 var instruction = {
@@ -363,7 +363,7 @@ timeline.push(instruction);
 /* define fixation */
 var fixation = {
   type: 'html-keyboard-response',
-  stimulus: '<div style="margin-top: 90px; font-size:60px;">+</div>',
+  stimulus: '<div style="margin-top: 60px; font-size:60px;">+</div>',
   choices: jsPsych.NO_KEYS,
   trial_duration() {
     return Math.floor(Math.random() * 200) + 800  //Math.floor(Math.random() * 200) + 800
@@ -387,9 +387,9 @@ var feedback = {
   stimulus: function(){
     var last_trial_correct = jsPsych.data.get().filter({TaskType: 'learning'}).last(1).values()[0].correct;
     if(last_trial_correct){
-      return "<p>Correct!</p>" //repo_site + 'img/Stim/correct.png'
+      return repo_site + 'test_stim/correct.png'
     } else {
-      return "<p>Incorrect!</p>"//repo_site + 'img/Stim/incorrect.png'
+      return repo_site + 'test_stim/incorrect.png'
     }
   },
   choices: jsPsych.NO_KEYS,
