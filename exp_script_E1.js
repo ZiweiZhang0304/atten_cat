@@ -93,12 +93,12 @@ jsPsych.pluginAPI.preloadImages(pre_load_list);
 if (S1B == 0){//45 deg boundary
     if (CR == 0){
     var stim_face_C1 = stim_face.slice(0,12)
-    var stim_face_C2 = stim_face.slice(12,length(stim_face))
+    var stim_face_C2 = stim_face.slice(12,stim_face.length)
 
   }
     else {
     var stim_face_C2 = stim_face.slice(0,12)
-    var stim_face_C1 = stim_face.slice(12,length(stim_face))
+    var stim_face_C1 = stim_face.slice(12,stim_face.length)
   }
 }
 else {
@@ -116,11 +116,11 @@ else {
 if (S2B == 0){//45 deg boundary
     if (CR == 0){
     var stim_house_C1 = stim_house.slice(0,12)
-    var stim_house_C2 = stim_house.slice(12,length(stim_house))
+    var stim_house_C2 = stim_house.slice(12,stim_house.length)
   }
     else {
     var stim_house_C2 = stim_house.slice(0,12)
-    var stim_house_C1 = stim_house.slice(12,length(stim_house))
+    var stim_house_C1 = stim_house.slice(12,stim_house.length)
   }
 }
 else {
