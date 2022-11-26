@@ -45,8 +45,22 @@ function getRandom(arr, n) { //export getRandom = function(arr, n)
         taken[x] = --len in taken ? taken[len] : len;
     }
     return result;
-}
+};
 
+function setCharAt(str, index, chr) {
+    if (index > str.length - 1) return str;
+    return str.substring(0, index) + chr + str.substring(index + 1);
+};
+
+function face_rep(str) {
+    str = setCharAt(str, 71, 'g');
+    return str
+}; // to test this name1 = repo_site + 'test_stim/human_faces/01_03_b.png'; face_rep(name1)
+
+function house_rep(str) {
+    str = setCharAt(str, 66, 'g');
+    return str
+}; // to test this name2 = repo_site + 'test_stim/houses/01_03_b.png'; house_rep(name2)
 
 // Shuffle category boundary
 var S1B = getRandom([0,1],1)[0]; //if 0, then cat boundary is 45 deg; if 1, then 135 deg
@@ -66,24 +80,24 @@ var C2_resp = resp[CR_rand[1]];
 
 //Stimuli
 var stim_face = [
-repo_site + 'test_stim/human_faces/01_03.png',repo_site +'test_stim/human_faces/01_04.png',repo_site +'test_stim/human_faces/01_05.png',repo_site +'test_stim/human_faces/01_06.png',
-repo_site + 'test_stim/human_faces/02_04.png',repo_site +'test_stim/human_faces/02_05.png',
-repo_site + 'test_stim/human_faces/03_08.png',repo_site +'test_stim/human_faces/04_08.png',repo_site +'test_stim/human_faces/05_08.png',repo_site +'test_stim/human_faces/06_08.png',
-repo_site + 'test_stim/human_faces/04_07.png',repo_site +'test_stim/human_faces/05_07.png',
-repo_site + 'test_stim/human_faces/03_01.png',repo_site +'test_stim/human_faces/04_01.png',repo_site +'test_stim/human_faces/05_01.png',repo_site +'test_stim/human_faces/06_01.png',
-repo_site + 'test_stim/human_faces/04_02.png',repo_site +'test_stim/human_faces/05_02.png',
-repo_site + 'test_stim/human_faces/08_03.png',repo_site +'test_stim/human_faces/08_04.png',repo_site +'test_stim/human_faces/08_05.png',repo_site +'test_stim/human_faces/08_06.png',
-repo_site + 'test_stim/human_faces/07_04.png',repo_site +'test_stim/human_faces/07_05.png'];
+repo_site + 'test_stim/human_faces/01_03_b.png',repo_site +'test_stim/human_faces/01_04_b.png',repo_site +'test_stim/human_faces/01_05_b.png',repo_site +'test_stim/human_faces/01_06_b.png',
+repo_site + 'test_stim/human_faces/02_04_b.png',repo_site +'test_stim/human_faces/02_05_b.png',
+repo_site + 'test_stim/human_faces/03_08_b.png',repo_site +'test_stim/human_faces/04_08_b.png',repo_site +'test_stim/human_faces/05_08_b.png',repo_site +'test_stim/human_faces/06_08_b.png',
+repo_site + 'test_stim/human_faces/04_07_b.png',repo_site +'test_stim/human_faces/05_07_b.png',
+repo_site + 'test_stim/human_faces/03_01_b.png',repo_site +'test_stim/human_faces/04_01_b.png',repo_site +'test_stim/human_faces/05_01_b.png',repo_site +'test_stim/human_faces/06_01_b.png',
+repo_site + 'test_stim/human_faces/04_02_b.png',repo_site +'test_stim/human_faces/05_02_b.png',
+repo_site + 'test_stim/human_faces/08_03_b.png',repo_site +'test_stim/human_faces/08_04_b.png',repo_site +'test_stim/human_faces/08_05_b.png',repo_site +'test_stim/human_faces/08_06_b.png',
+repo_site + 'test_stim/human_faces/07_04_b.png',repo_site +'test_stim/human_faces/07_05_b.png'];
 
 var stim_house = [
-repo_site +'test_stim/houses/01_03.png',repo_site +'test_stim/houses/01_04.png',repo_site +'test_stim/houses/01_05.png',repo_site +'test_stim/houses/01_06.png',
-repo_site +'test_stim/houses/02_04.png',repo_site +'test_stim/houses/02_05.png',
-repo_site +'test_stim/houses/03_08.png',repo_site +'test_stim/houses/04_08.png',repo_site +'test_stim/houses/05_08.png',repo_site +'test_stim/houses/06_08.png',
-repo_site +'test_stim/houses/04_07.png',repo_site +'test_stim/houses/05_07.png',
-repo_site +'test_stim/houses/03_01.png',repo_site +'test_stim/houses/04_01.png',repo_site +'test_stim/houses/05_01.png',repo_site +'test_stim/houses/06_01.png',
-repo_site +'test_stim/houses/04_02.png',repo_site +'test_stim/houses/05_02.png',
-repo_site +'test_stim/houses/08_03.png',repo_site +'test_stim/houses/08_04.png',repo_site +'test_stim/houses/08_05.png',repo_site +'test_stim/houses/08_06.png',
-repo_site +'test_stim/houses/07_04.png',repo_site +'test_stim/houses/07_05.png'];
+repo_site +'test_stim/houses/01_03_b.png',repo_site +'test_stim/houses/01_04_b.png',repo_site +'test_stim/houses/01_05_b.png',repo_site +'test_stim/houses/01_06_b.png',
+repo_site +'test_stim/houses/02_04_b.png',repo_site +'test_stim/houses/02_05_b.png',
+repo_site +'test_stim/houses/03_08_b.png',repo_site +'test_stim/houses/04_08_b.png',repo_site +'test_stim/houses/05_08_b.png',repo_site +'test_stim/houses/06_08_b.png',
+repo_site +'test_stim/houses/04_07_b.png',repo_site +'test_stim/houses/05_07_b.png',
+repo_site +'test_stim/houses/03_01_b.png',repo_site +'test_stim/houses/04_01_b.png',repo_site +'test_stim/houses/05_01_b.png',repo_site +'test_stim/houses/06_01_b.png',
+repo_site +'test_stim/houses/04_02_b.png',repo_site +'test_stim/houses/05_02_b.png',
+repo_site +'test_stim/houses/08_03_b.png',repo_site +'test_stim/houses/08_04_b.png',repo_site +'test_stim/houses/08_05_b.png',repo_site +'test_stim/houses/08_06_b.png',
+repo_site +'test_stim/houses/07_04_b.png',repo_site +'test_stim/houses/07_05_b.png'];
 // This ensures that images appear exactly when we tell them to.
 var pre_load_list = stim_face.concat(stim_house);
 jsPsych.pluginAPI.preloadImages(pre_load_list);
@@ -177,6 +191,7 @@ for (j = 0; j < learning_stimuli_list.length; j++) {
         learning_stimuli.data.correct_response = resp[CR];
         learning_stimuli.data.boundary = S1B;
         learning_stimuli.data.feedback_num = S1F;
+        learning_stimuli.postresp = face_rep(learning_stimuli.stimulus);
 
     } else if (stim_face_C2_F.includes(learning_stimuli.stimulus)) {
         learning_stimuli.data.set = 'face';
@@ -184,6 +199,7 @@ for (j = 0; j < learning_stimuli_list.length; j++) {
         learning_stimuli.data.correct_response = resp[CR_rand[1]];
         learning_stimuli.data.boundary = S1B;
         learning_stimuli.data.feedback_num = S1F;
+        learning_stimuli.postresp = face_rep(learning_stimuli.stimulus);
 
     } else if (stim_house_C1_F.includes(learning_stimuli.stimulus)) {
         learning_stimuli.data.set = 'house';
@@ -191,6 +207,7 @@ for (j = 0; j < learning_stimuli_list.length; j++) {
         learning_stimuli.data.correct_response = resp[CR];
         learning_stimuli.data.boundary_cont = S2B;
         learning_stimuli.data.feedback_cont = S2F;
+        learning_stimuli.postresp = house_rep(learning_stimuli.stimulus);
 
     } else if (stim_house_C2_F.includes(learning_stimuli.stimulus)){
         learning_stimuli.data.set = 'house';
@@ -198,6 +215,7 @@ for (j = 0; j < learning_stimuli_list.length; j++) {
         learning_stimuli.data.correct_response = resp[CR_rand[1]];
         learning_stimuli.data.boundary = S2B;
         learning_stimuli.data.feedback_num = S2F;
+        learning_stimuli.postresp = house_rep(learning_stimuli.stimulus);
 
     } else {
         console.log('not in any of the cats, might be something wrong.')
@@ -228,6 +246,7 @@ for (j = 0; j < test_stimuli_list.length; j++) {
         test_stimuli.data.correct_response = resp[CR];
         test_stimuli.data.boundary = S1B;
         test_stimuli.data.feedback_num = S1F;
+        test_stimuli.postresp = face_rep(test_stimuli.stimulus);
 
     } else if (stim_face_C2_T.includes(test_stimuli.stimulus)) {
         test_stimuli.data.set = 'face';
@@ -235,6 +254,7 @@ for (j = 0; j < test_stimuli_list.length; j++) {
         test_stimuli.data.correct_response = resp[CR_rand[1]];
         test_stimuli.data.boundary = S1B;
         test_stimuli.data.feedback_num = S1F;
+        test_stimuli.postresp = face_rep(test_stimuli.stimulus);
 
     } else if (stim_house_C1_T.includes(test_stimuli.stimulus)) {
         test_stimuli.data.set = 'house';
@@ -242,6 +262,7 @@ for (j = 0; j < test_stimuli_list.length; j++) {
         test_stimuli.data.correct_response = resp[CR];
         test_stimuli.data.boundary = S2B;
         test_stimuli.data.feedback_num = S2F;
+        test_stimuli.postresp = house_rep(test_stimuli.stimulus);
 
     } else if (stim_house_C2_T.includes(test_stimuli.stimulus)){
         test_stimuli.data.set = 'house';
@@ -249,6 +270,7 @@ for (j = 0; j < test_stimuli_list.length; j++) {
         test_stimuli.data.correct_response = resp[CR_rand[1]];
         test_stimuli.data.boundary = S2B;
         test_stimuli.data.feedback_num = S2F;
+        test_stimuli.postresp = house_rep(test_stimuli.stimulus);
 
     } else {
         console.log('not in any of the cats, might be something wrong.')
@@ -396,6 +418,31 @@ var learning = {
   }
 };
 
+
+var learning = {
+  timeline:[
+  {type: "image-keyboard-response",
+  stimulus: jsPsych.timelineVariable('stimulus'),
+  choices: ['j', 'k'],
+  data: jsPsych.timelineVariable('data'),
+  trial_duration: 2400,
+  on_finish: function (data) {
+      data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
+    }
+},
+  {type: "image-keyboard-response",
+    stimulus: jsPsych.timelineVariable('postresp'),
+    choices: jsPsych.NO_KEYS,
+    response_ends_trial: false,
+    trial_duration:function(data) {
+            if (jsPsych.data.get().filter({ TaskType: 'learing' }).last(1).select('rt').values[0] == null) {
+                var fix_duration = 0
+            } else { var fix_duration = 2400 - (jsPsych.data.get().filter({ TaskType: 'learing' }).last(1).select('rt').values[0]); };
+            return fix_duration
+        }
+    }
+};
+
 /* define feedback trials */
 var feedback = {
   type: "image-keyboard-response",
@@ -424,13 +471,25 @@ timeline.push(learning_procedure);
 /* -----Phase 2: test category learning-----*/
 /* define testing trials */
 var testing = {
-  type: "image-keyboard-response",
+    timeline: [
+  {type: "image-keyboard-response",
   stimulus: jsPsych.timelineVariable('stimulus'),
   choices: ['j', 'k'],
   data: jsPsych.timelineVariable('data'),
   trial_duration: 1600,
   on_finish: function (data) {
       data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
+  }},
+  {type: "image-keyboard-response",
+    stimulus: jsPsych.timelineVariable('postresp'),
+    choices: jsPsych.NO_KEYS,
+    response_ends_trial: false,
+    trial_duration:function(data) {
+            if (jsPsych.data.get().filter({ TaskType: 'testing' }).last(1).select('rt').values[0] == null) {
+                var fix_duration = 0
+            } else { var fix_duration = 2400 - (jsPsych.data.get().filter({ TaskType: 'testing' }).last(1).select('rt').values[0]); };
+            return fix_duration
+        }
   }
 };
 /* define testing procedure */
