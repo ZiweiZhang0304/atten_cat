@@ -1,4 +1,4 @@
-console.log('test001')
+console.log('test002')
 
 var task_name = "atten_cat";
 var sbj_id = "test01";
@@ -98,8 +98,20 @@ repo_site +'test_stim/houses/03_01_b.png',repo_site +'test_stim/houses/04_01_b.p
 repo_site +'test_stim/houses/04_02_b.png',repo_site +'test_stim/houses/05_02_b.png',
 repo_site +'test_stim/houses/08_03_b.png',repo_site +'test_stim/houses/08_04_b.png',repo_site +'test_stim/houses/08_05_b.png',repo_site +'test_stim/houses/08_06_b.png',
 repo_site +'test_stim/houses/07_04_b.png',repo_site +'test_stim/houses/07_05_b.png'];
+
+var stim_face_g = [];
+for (j = 0; j < stim_face.length; j++) {
+    var face_g = face_rep(stim_face[j]);
+    stim_face_g.push(face_g);
+}
+
+var stim_house_g = [];
+for (j = 0; j < stim_house.length; j++) {
+    var house_g = house_rep(stim_house[j]);
+    stim_house_g.push(house_g);
+}
 // This ensures that images appear exactly when we tell them to.
-var pre_load_list = stim_face.concat(stim_house);
+var pre_load_list = stim_face.concat(stim_house, stim_face_g, stim_house_g);
 jsPsych.pluginAPI.preloadImages(pre_load_list);
 
 // Define category boundary, learning and test stim
