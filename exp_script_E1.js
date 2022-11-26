@@ -435,9 +435,9 @@ var learning = {
     choices: jsPsych.NO_KEYS,
     response_ends_trial: false,
     trial_duration:function(data) {
-            if (jsPsych.data.get().filter({ TaskType: 'learing' }).last(1).select('rt').values[0] == null) {
+            if (jsPsych.data.get().filter({ TaskType: 'learning' }).last(1).select('rt').values[0] == null) {
                 var fix_duration = 0
-            } else { var fix_duration = 2400 - (jsPsych.data.get().filter({ TaskType: 'learing' }).last(1).select('rt').values[0]); };
+            } else { var fix_duration = 2400 - (jsPsych.data.get().filter({ TaskType: 'learning' }).last(1).select('rt').values[0]); };
             return fix_duration
         }
     }]
