@@ -1,4 +1,4 @@
-console.log('test000')
+console.log('test001')
 
 var task_name = "atten_cat";
 var sbj_id = "test01";
@@ -407,16 +407,16 @@ var fixation = {
   },
 }
 /* define learning trials */
-var learning = {
-  type: "image-keyboard-response",
-  stimulus: jsPsych.timelineVariable('stimulus'),
-  choices: ['j', 'k'],
-  data: jsPsych.timelineVariable('data'),
-  trial_duration: 2400,
-  on_finish: function (data) {
-      data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
-  }
-};
+// var learning = {
+//   type: "image-keyboard-response",
+//   stimulus: jsPsych.timelineVariable('stimulus'),
+//   choices: ['j', 'k'],
+//   data: jsPsych.timelineVariable('data'),
+//   trial_duration: 2400,
+//   on_finish: function (data) {
+//       data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
+//   }
+// };
 
 
 var learning = {
@@ -440,7 +440,7 @@ var learning = {
             } else { var fix_duration = 2400 - (jsPsych.data.get().filter({ TaskType: 'learing' }).last(1).select('rt').values[0]); };
             return fix_duration
         }
-    }
+    }]
 };
 
 /* define feedback trials */
@@ -490,7 +490,7 @@ var testing = {
             } else { var fix_duration = 2400 - (jsPsych.data.get().filter({ TaskType: 'testing' }).last(1).select('rt').values[0]); };
             return fix_duration
         }
-  }
+  }]
 };
 /* define testing procedure */
 var testing_procedure = {
