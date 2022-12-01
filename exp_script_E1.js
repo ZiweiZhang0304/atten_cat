@@ -457,7 +457,7 @@ var learning = {
 
 /* define feedback trials */
 var feedback = {
-  type: "jsPsychHtmlKeyboardResponse", //"image-keyboard-response"
+  type: "jspsych-html-keyboard-response", //"image-keyboard-response"
   stimulus: function(){
     var last_trial_correct = jsPsych.data.get().filter({TaskType: 'learning'}).last(1).values()[0].correct;
     if(last_trial_correct){
