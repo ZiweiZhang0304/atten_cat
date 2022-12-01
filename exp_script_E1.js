@@ -461,9 +461,9 @@ var feedback = {
   stimulus: function(){
     var last_trial_correct = jsPsych.data.get().filter({TaskType: 'learning'}).last(1).values()[0].correct;
     if(last_trial_correct){
-      return repo_site + 'test_stim/correct.png'
+      return 'Correct'//repo_site + 'test_stim/correct.png'
     } else {
-      return repo_site + 'test_stim/incorrect.png'
+      return 'Incorrect'//repo_site + 'test_stim/incorrect.png'
     }
   },
   choices: jsPsych.NO_KEYS,
