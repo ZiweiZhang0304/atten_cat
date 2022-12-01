@@ -463,7 +463,7 @@ var feedback = {
     if(last_trial_correct){
       return "<p style='color:black;font-size:40px;'> <b>Correct!</b> </p>";//repo_site + 'test_stim/correct.png'
     } else {
-      return "<p style='color:black;font-size:40px;'> <b>Correct!</b> </p>";//repo_site + 'test_stim/incorrect.png'
+      return "<p style='color:black;font-size:40px;'> <b>Incorrect!</b> </p>";//repo_site + 'test_stim/incorrect.png'
     }
   },
   choices: jsPsych.NO_KEYS,
