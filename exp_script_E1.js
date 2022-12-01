@@ -412,7 +412,7 @@ var instruction2 = {
 /* define fixation */
 var fixation = {
   type: 'html-keyboard-response',
-  stimulus: '<div style="margin-top: 30px; font-size:50px;">+</div>',
+  stimulus: '<div style="font-size:50px;">+</div>', //style= "margin-top: 30px;"
   choices: jsPsych.NO_KEYS,
   trial_duration() {
     return Math.floor(Math.random() * 200) + 1600  //Math.floor(Math.random() * 200) + 800
@@ -461,9 +461,9 @@ var feedback = {
   stimulus: function(){
     var last_trial_correct = jsPsych.data.get().filter({TaskType: 'learning'}).last(1).values()[0].correct;
     if(last_trial_correct){
-      return "<p style='color:blue;font-size:20px;'> <b>Correct!</b> </p>";//repo_site + 'test_stim/correct.png'
+      return "<p style='color:black;font-size:40px;'> <b>Correct!</b> </p>";//repo_site + 'test_stim/correct.png'
     } else {
-      return "<p style='color:black;font-size:20px;'> <b>Correct!</b> </p>";//repo_site + 'test_stim/incorrect.png'
+      return "<p style='color:black;font-size:40px;'> <b>Correct!</b> </p>";//repo_site + 'test_stim/incorrect.png'
     }
   },
   choices: jsPsych.NO_KEYS,
