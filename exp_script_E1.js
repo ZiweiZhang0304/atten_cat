@@ -457,13 +457,13 @@ var learning = {
 
 /* define feedback trials */
 var feedback = {
-  type: "image-keyboard-response",
+  type: "jsPsychHtmlKeyboardResponse", //"image-keyboard-response"
   stimulus: function(){
     var last_trial_correct = jsPsych.data.get().filter({TaskType: 'learning'}).last(1).values()[0].correct;
     if(last_trial_correct){
-      return 'Correct'//repo_site + 'test_stim/correct.png'
+      return "<p>Correct!</p>";//repo_site + 'test_stim/correct.png'
     } else {
-      return 'Incorrect'//repo_site + 'test_stim/incorrect.png'
+      return "<p>Correct!</p>";//repo_site + 'test_stim/incorrect.png'
     }
   },
   choices: jsPsych.NO_KEYS,
